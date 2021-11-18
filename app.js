@@ -40,7 +40,14 @@ app.set('view engine', 'ejs');
 // =========================== ROUTERS ================================ //
 
 app.get('/', function (req, res) {
-  res.render('index', {});
+  // res.render('index', {});
+  res.json({
+    status: "success",
+    message: "API V3",
+    data: {
+      "version_number": "v1.0.0"
+    }
+  });
 });
 
 app.use('/', function (req, res, next) {
