@@ -40,7 +40,7 @@ app.set('view engine', 'ejs');
 // =========================== ROUTERS ================================ //
 
 app.get('/', function (req, res) {
-  // res.render('index', {});
+  res.render('index', {});
 });
 
 app.use('/', function (req, res, next) {
