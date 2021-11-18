@@ -31,11 +31,12 @@ const io = require('socket.io')(server,{
   cors: {
       origin: '*',      
   },
+  path: "/socket.io.speech"
 });
 
-app.use('/assets', express.static(__dirname + '/public'));
-app.use('/session/assets', express.static(__dirname + '/public'));
-app.set('view engine', 'ejs');
+// app.use('/assets', express.static(__dirname + '/public'));
+// app.use('/session/assets', express.static(__dirname + '/public'));
+// app.set('view engine', 'ejs');
 
 // =========================== ROUTERS ================================ //
 
