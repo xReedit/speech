@@ -33,14 +33,14 @@ const io = require('socket.io')(server,{
   },
 });
 
-// app.use('/assets', express.static(__dirname + '/public'));
-// app.use('/session/assets', express.static(__dirname + '/public'));
+app.use('/assets', express.static(__dirname + '/public'));
+app.use('/session/assets', express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 
 // =========================== ROUTERS ================================ //
 
 app.get('/', function (req, res) {
-  res.render('index', {});
+  // res.render('index', {});
 });
 
 app.use('/', function (req, res, next) {
