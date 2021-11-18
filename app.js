@@ -151,21 +151,22 @@ io.on('connection', function (client) {
   client.on('tts', function (data) {
 
     getAudioSpeech(data);
-    return;
+    // return;
 
     // client.emit('speechDataTTS', '');
     // return;
-    textToAudioMP3(text).then(function(results){
-      console.log(results);
-      client.emit('speechDataTTS', results);
-    }).catch(function(e){
-        console.log(e);
-    });
+    // textToAudioMP3(text).then(function(results){
+    //   console.log(results);
+    //   client.emit('speechDataTTS', results);
+    // }).catch(function(e){
+    //     console.log(e);
+    // });
   });
 
   async function getAudioSpeech(data) {
     // primero buscamos en db
     let nameSearchAudio = await apiSpeechBD.getAudioResource(data);
+    console.log('nameSearchAudio', nameSearchAudio);
     if ( nameSearchAudio.length > 0 ) {
       client.emit('speechDataTTS', nameSearchAudio[0].nomfile);
     } else {
@@ -186,7 +187,7 @@ io.on('connection', function (client) {
           console.log(e);
       });
     }
-    console.log('nameSearchAudio', nameSearchAudio);
+    // console.log('nameSearchAudio', nameSearchAudio);
   }
 
   // TTS mp3
