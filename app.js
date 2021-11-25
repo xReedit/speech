@@ -240,13 +240,13 @@ const request = {
     profanityFilter: false,
     enableWordTimeOffsets: true,
     enableAutomaticPunctuation: true,
-    model: 'command_and_search',    
+    model: 'default',    
     // maxAlternatives: 5
     speechContexts: [{
         phrases: _phrases
        }] // add your own speech context for better recognition
   },
-  singleUtterance: true,
+  // singleUtterance: true,
   interimResults: true, // If you want interim results, set this to true
 };
 
