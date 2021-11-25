@@ -240,7 +240,7 @@ const request = {
     profanityFilter: false,
     enableWordTimeOffsets: true,
     enableAutomaticPunctuation: true,
-    model: 'default',    
+    model: 'command_and_search',    
     // maxAlternatives: 5
     speechContexts: [{
         phrases: _phrases
@@ -248,7 +248,6 @@ const request = {
   },
   singleUtterance: true,
   interimResults: true, // If you want interim results, set this to true
-  // silenceThreshold : 1700
 };
 
 
